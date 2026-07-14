@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: auth_db
+    environment:
+      - POSTGRES_USER=auth_user
+      - POSTGRES_PASSWORD=auth_password
+      - POSTGRES_DB=neondb
+    ports:
+      - "3000:3000"
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data
+  volumes:
+    auth_db_data:
