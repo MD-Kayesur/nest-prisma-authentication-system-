@@ -12,4 +12,7 @@ export class RegisterUserDto {
 
     @ApiProperty({ description: 'Secure password for the user', example: 'password123' })
     password: string;
+
+    @ApiProperty({ description: 'Role of the user', example: 'USER' })
+    role?: string;
 }
