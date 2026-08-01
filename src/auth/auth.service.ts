@@ -16,7 +16,8 @@ const  hashedPassword = await bcrypt.hash(registerUserDto.password, 10);
 
 
 
-return this. userService.createUser(registerUserDto) 
+const user = await this.userService.createUser(registerUserDto) 
+return user
 }
 
 }
